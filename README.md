@@ -11,3 +11,5 @@ Object Pooling is a technique that can help mitigate this issue. Instead of cons
 Object pooling is not limited to this lasers system it can be applied to other types of objects in games as well. It's a versatile technique that can help optimize performance in scenarios where objects are frequently created and destroyed.
 
 I also use event driven system for work function only it calls.
+
+For object pool size value I estimate maximum number of lasers and profiler with dynamic pool size. The value depends to computer. Having a larger pool size will consume more memory, so we need to find a balance ensures game have enough lasers available without wasting resources.
