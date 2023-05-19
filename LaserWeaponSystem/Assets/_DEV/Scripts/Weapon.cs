@@ -1,27 +1,36 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private GameObject laserPrefab;
-    [SerializeField] private Transform firePoint;
-    
-    public UnityEvent onFire;
+    public Transform firePoint;
+    public Button fireButton;
 
     private void OnEnable()
     {
-        onFire.AddListener(Fire);
+        fireButton.onClick.AddListener(Fire);
     }
 
     private void OnDisable()
     {
-        onFire.RemoveListener(Fire);
+        fireButton.onClick.RemoveListener(Fire);
     }
-    
+
     private void Fire()
     {
-        GameObject laser = Instantiate(laserPrefab, firePoint.position, firePoint.rotation);
+        GameObject laser = LaserObjectPool.Instance.GetLaser();
+        
+        laser.transform.position = firePoint.position;
+        laser.transform.rotation = firePoint.rotation;
+
+        laser.SetActive(true);
+
+        Laser laserScript = laser.GetComponent<Laser>();
+        if (laserScript != null)
+        {
+            laserScript.SetSpeed(10f);
+        }
     }
 }
