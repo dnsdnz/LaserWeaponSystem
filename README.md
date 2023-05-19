@@ -9,3 +9,5 @@ Solution:
 Object Pooling is a technique that can help mitigate this issue. Instead of constantly creating and destroying laser instances, you can create a pool of pre-allocated laser objects at the start and reuse them when needed. This reduces the overhead of instantiating and destroying objects and improves performance. This leads to improved performance, especially when firing the gun quickly.
 
 Object pooling is not limited to this lasers system it can be applied to other types of objects in games as well. It's a versatile technique that can help optimize performance in scenarios where objects are frequently created and destroyed.
+
+I also use event driven system for work function only it calls.
