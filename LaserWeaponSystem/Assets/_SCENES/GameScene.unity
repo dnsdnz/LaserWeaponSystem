@@ -1293,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1956712275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1446,6 +1446,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1332790797}
   fireButton: {fileID: 816707747}
+  Cam: {fileID: 473604023}
+  MaxLength: 40
+  onFire:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &2103745976
 MeshRenderer:
   m_ObjectHideFlags: 0

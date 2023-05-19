@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LaserObjectPool : MonoBehaviour
 {
-    public static LaserObjectPool Instance { get; private set; }
+    public static LaserObjectPool Instance;
 
     public GameObject laserPrefab;
     public int initialPoolSize = 10;
